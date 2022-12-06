@@ -1,0 +1,15 @@
+<template>
+    <lightning-card variant="narrow" icon-name="action:new_note">
+        <h1 slot="title">All Votings</h1>
+        
+            <lightning-input type=”search” label="Search Voting" onchange={handleSearch} style="margin-left:1%; margin-right:1%;"></lightning-input><br/><br/>
+            <div style="height: 200px;">
+            <lightning-datatable
+                    key-field="Id"
+                    data={voting}
+                    columns={columns}
+                    hide-checkbox-column="true">
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

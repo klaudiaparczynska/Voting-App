@@ -1,0 +1,64 @@
+<template>
+    <lightning-card >
+        <div class="slds-page-header slds-page-header--object-home">
+            <lightning-layout>
+                <lightning-layout-item >
+                    <lightning-icon icon-name="standard:contact" alternative-text="Contact" ></lightning-icon>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-var-m-left_small">
+                    <h1 class="slds-page-header__title slds-var-p-right_x-small">
+                        Votings</h1>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+        <template if:true={votings.length}>
+        <div class="slds-form-element__control">
+            <div class="slds-select_container">
+                <select class="slds-select" id="select-01" onchange={onValueSelection} >
+                    <template for:each={votings} for:item="voting" >
+                        <option key={voting.Id} value={voting.Id} >
+                            {voting.Name}
+                        </option>
+                    </template>
+                </select>
+            </div>
+        </div>
+    </template>
+   
+
+    
+        <template if:true={votingOptions}>
+            <lightning-card title="Available votes:">
+                <div style="margin-left:3%;">
+                    <lightning-radio-group label="Pick your vote:" 
+                                            name="radioButtonGroup" 
+                                            onchange={handleChange} 
+                                            options={options}
+                                            value={selectedValue}
+                                            type="radio"></lightning-radio-group>
+
+                    <br/>
+                </div>
+            </lightning-card>  
+            
+        </template>
+        <template if:true={selectedValue}>
+            <lightning-record-edit-form
+                object-api-name={addVoteForm}
+                onsuccess={handleSuccess}
+            >
+                <lightning-messages> </lightning-messages>
+                
+                <lightning-input-field label="feedback" field-name={feedbackField}></lightning-input-field>
+                <lightning-input-field label="campaign" field-name={campingField} value={recordId} disabled="true" ></lightning-input-field>
+                <lightning-input-field label="voting" field-name={votingField} value={selectedVoting} disabled="true"></lightning-input-field>
+                <lightning-input-field field-name={voteField} value={selectedValue} disabled="true"></lightning-input-field>
+                <div class="slds-var-m-top_medium">
+                    <lightning-button variant="brand" type="submit" name="update" label="Save">
+
+                    </lightning-button>
+                </div>
+            </lightning-record-edit-form>
+        </template>
+    </lightning-card>
+</template>

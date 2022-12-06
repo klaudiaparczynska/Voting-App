@@ -1,0 +1,27 @@
+
+<template>
+    <lightning-card  title="Voting Campaign">
+        <div>
+                <lightning-record-edit-form 
+                object-api-name={VotingCamp}
+                onsuccess={handleSuccess}
+                >
+                    <lightning-messages> </lightning-messages>
+                    <div class="slds-grid slds-wrap slds-var-p-horizontal_medium">
+
+                    <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium"><lightning-input-field field-name={Name}> </lightning-input-field></div>
+                    <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium"><lightning-input-field field-name={Status}> </lightning-input-field></div>
+                    <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium"><lightning-input-field field-name={StartDate}> </lightning-input-field></div>
+                    <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium"><lightning-input-field field-name={EndDate}> </lightning-input-field></div>
+                    <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium"><lightning-input-field field-name={VotingLocation}> </lightning-input-field></div>
+                    <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium"><lightning-input-field field-name={AgeRange}> </lightning-input-field></div>
+                    <lightning-button
+                    variant="brand" type="submit" name="update" label="Create Voting Campaign"
+                    >
+                    </lightning-button>
+                
+                </div>
+                </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

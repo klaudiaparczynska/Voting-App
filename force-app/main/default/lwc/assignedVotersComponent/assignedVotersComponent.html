@@ -1,0 +1,37 @@
+<template>
+    <lightning-card variant="narrow" icon-name="standard:opportunity">
+        <h1 slot="title">Assigned Voters</h1>
+        <div style="height: 150px;">
+            <lightning-datatable
+                    key-field="Id"
+                    data={usernames}
+                    columns={columns}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+
+    <lightning-card variant="narrow" icon-name="standard:opportunity">
+        <h1 slot="title">Assigned Moderators</h1>
+        <div style="height: 150px;">
+            <lightning-datatable
+                    key-field="Id"
+                    data={moderators}
+                    columns={columns}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+
+    <lightning-card variant="narrow" icon-name="standard:opportunity">
+        <h1 slot="title">Assigned Analysts</h1>
+        <div style="height: 150px;">
+            <lightning-datatable
+                    key-field="Id"
+                    data={analysists}
+                    columns={columns}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>
+
+
+

@@ -1,0 +1,27 @@
+<template>
+    <lightning-card  title="Create New Voting Location">
+        <div>
+                <lightning-record-edit-form 
+                object-api-name={VotingLoc}
+                onsuccess={handleSuccess}
+                >
+                    <lightning-messages> </lightning-messages>
+                    <div class="slds-grid slds-wrap slds-var-p-horizontal_medium">
+
+                    <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium"><lightning-input-field field-name={Name}> </lightning-input-field></div>
+                    <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium"><lightning-input-field field-name={Country}> </lightning-input-field></div>
+                    <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium"><lightning-input-field field-name={City}> </lightning-input-field></div>
+                    <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium"><lightning-input-field field-name={Street}> </lightning-input-field></div>
+                    <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium"><lightning-input-field field-name={PostalCode}> </lightning-input-field></div>
+                    <lightning-button class="slds-col slds-size_12-of-12 slds-var-p-horizontal_medium"
+                    variant="brand" type="submit" name="update" label="Create Voting Location"
+                    >
+                    </lightning-button>
+                
+                </div>
+                </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+    
+   
+</template>

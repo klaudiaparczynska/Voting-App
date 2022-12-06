@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Voting">
+        <div>
+                <lightning-record-edit-form 
+                object-api-name={Voting}
+                onsuccess={handleSuccess}
+                >
+                    <lightning-messages> </lightning-messages>
+                    <div class="slds-grid slds-wrap slds-var-p-horizontal_medium">
+
+                    <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium"><lightning-input-field field-name={Name}> </lightning-input-field></div>
+                    <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium"><lightning-input-field field-name={Type}> </lightning-input-field></div>
+                    <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium"><lightning-input-field field-name={VotingCampaign} value={recordId} disabled="true"> </lightning-input-field></div>
+                    <div class="slds-col slds-size_12-of-12 slds-var-p-horizontal_medium">
+                    <lightning-button
+                    variant="brand" type="submit" name="create" label="Create Voting"
+                    >
+                    </lightning-button>
+                    </div>
+                
+                </div>
+                </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

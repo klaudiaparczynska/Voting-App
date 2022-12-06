@@ -1,0 +1,20 @@
+<template>
+    <lightning-card variant="narrow" icon-name="action:new_note">
+        <h1 slot="title">All Submitted Answers</h1>
+        <div style="height: 200px;">
+            <lightning-datatable
+                    key-field="Id"
+                    data={votes}
+                    columns={columns}
+                    hide-checkbox-column="true"
+                    onrowaction={navigateToRecordViewPage}>
+                    
+            </lightning-datatable>
+        </div>
+        <div slot="actions">
+            <lightning-button-icon
+                icon-name="utility:down"
+            ></lightning-button-icon>
+        </div>
+    </lightning-card>
+</template>

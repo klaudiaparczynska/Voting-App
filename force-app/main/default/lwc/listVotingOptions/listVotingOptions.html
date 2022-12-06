@@ -1,0 +1,20 @@
+<template>
+    <lightning-card variant="narrow" icon-name="action:new_note">
+        <h1 slot="title">All Voting Question Options</h1>
+        <lightning-input type=”search” label="Search Voting Option" onchange={handleSearch}></lightning-input><br/><br/>
+        <div style="height: 200px;">
+            <lightning-datatable
+                    key-field="Name"
+                    data={options}
+                    columns={columns}
+                    hide-checkbox-column="true"
+                    >
+            </lightning-datatable>
+        </div>
+        <div slot="actions">
+            <lightning-button-icon
+                icon-name="utility:down"
+            ></lightning-button-icon>
+        </div>
+    </lightning-card>
+</template>
