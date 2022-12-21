@@ -3,10 +3,21 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>home:recentRecordContainer</componentName>
-                <identifier>home_recentRecordContainer</identifier>
+                <componentName>createVotingCampaign_form</componentName>
+                <identifier>c_createVotingCampaign_form</identifier>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>listCampaigns</componentName>
+                <identifier>c_listCampaigns</identifier>
+            </componentInstance>
+        </itemInstances>
+        <mode>Replace</mode>
+        <name>top</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
         <mode>Replace</mode>
         <name>bottomLeft</name>
         <type>Region</type>
@@ -17,11 +28,17 @@
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>allLocationsMap</componentName>
+                <identifier>c_allLocationsMap</identifier>
+            </componentInstance>
+        </itemInstances>
         <mode>Replace</mode>
         <name>sidebar</name>
         <type>Region</type>
     </flexiPageRegions>
-    <masterLabel>Home Page Default</masterLabel>
+    <masterLabel>Configurator Home</masterLabel>
     <parentFlexiPage>home__desktopDefault</parentFlexiPage>
     <template>
         <name>home:desktopTemplate</name>
